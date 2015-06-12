@@ -22,8 +22,10 @@ class App
 
 	public function route($url)
 	{
+		$url[0] = ucfirst($url[0]);
+
 		//If the controller file exist, go to it
-		if (file_exists('../app/controllers/'.$url[0].'.php'))
+		if (file_exists('../app/controllers/' . $url[0] . '.php'))
 		{
 			$this->controller = $url[0];
 			unset($url[0]);

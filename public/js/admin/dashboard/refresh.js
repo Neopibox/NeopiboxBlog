@@ -18,8 +18,8 @@ function callback()
 			$('#RAM > span').attr('style', 'width: ' + data.RAM_usage + '%;');
 			$('#SWAP > span').attr('style', 'width: ' + data.SWAP_usage + '%;');
 			$('#HDD > span').attr('style', 'width: ' + data.HDD_usage + '%;');
-		}
+		});
 	}
 }
 
-var truc = setInterval(callback, 100);
+var truc = setInterval(callback, 500);
