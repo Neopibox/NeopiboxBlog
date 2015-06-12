@@ -273,22 +273,26 @@ footer p
 
 .meter_gauge
 {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: whiteSmoke;
-    box-shadow: 0 5px 5px -5px #333 inset;
-    height: 25px;
-    display: block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 0 5px 5px -5px #333 inset;
+	height: 25px;
+	display: block;
+
+	/* Gradient */
+	background: #719fd1; /* Fallback */
+	background: linear-gradient(to right, rgba(0,200,0,255) 0%, rgba(255,255,0,255) 50%, rgba(255,0,0,255) 100%); /* W3C */
 }
 
 .meter_gauge > span
 {
-  height: inherit;  
-  box-shadow: 0 5px 5px -5px #999 inset;
-  background-color: #719fd1;
-  background-size: 100% 100%;
-  display: block;
-  text-indent: -9999px;
+	height: inherit;  
+	box-shadow: 0 5px 5px -5px #999 inset;
+	background-size: 100% 100%;
+	display: block;
+	text-indent: -9999px;
+	background-color: whiteSmoke;
+	float: right;
 }
 
 .dashboard
