@@ -30,4 +30,21 @@ class Controller
 			require_once '../app/views/' . $view . '.php';
 		}
 	}
+
+	// Re-route to sub-controllers if necessary
+	public function route($controller, $path, $action, $params = [])
+	{
+		require_once '../app/controllers/' . $path . '/' . $controller . '.php';
+
+		// Create a instance of the controller
+		$controller = new $controller;
+
+		// If the method exist, execute it
+		if(method_exists($controller, $action))
+		{
+			$method = $action;
+		}
+
+		call_user_func_array([$controller, $method], $params);
+	}
 }
