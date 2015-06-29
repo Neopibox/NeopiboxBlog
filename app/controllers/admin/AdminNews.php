@@ -7,11 +7,11 @@ class AdminNews extends Controller
 		$this->list_news();
 	}
 
-	public function list_news()
+	public function list_news($id = 1)
 	{
 		$model = $this->model('News');
 
-		$news = $model->get_list_news(1, 30);
+		$news = $model->get_list_news($id, 30);
 
 		$this->view('admin/news/list', $news);
 	}
