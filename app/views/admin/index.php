@@ -53,6 +53,8 @@ $title = 'Administration';
 
 				<section>
 					<h2>Membres</h2>
+
+					<a href="admin/member">Lister les membres</a>
 				</section>
 			</div>
 		</div>
